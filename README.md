@@ -1,4 +1,4 @@
-#SilverStripe AceEditorField
+# SilverStripe AceEditorField
 
 A SilverStripe 4 implementation of Ace Editor (https://ace.c9.io)
 
