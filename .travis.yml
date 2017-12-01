@@ -9,12 +9,17 @@ matrix:
     - php: 7.1
       env: DB=MYSQL
 
+#before_script:
+#- phpenv rehash
+#- composer self-update
+#- git clone git://github.com/silverstripe-labs/silverstripe-travis-support.git ~/travis-support
+#- php ~/travis-support/travis_setup.php --source `pwd` --target ~/builds/ss
+#- cd ~/builds/ss
 before_script:
-- phpenv rehash
-- composer self-update
-- git clone git://github.com/silverstripe-labs/silverstripe-travis-support.git ~/travis-support
-- php ~/travis-support/travis_setup.php --source `pwd` --target ~/builds/ss
-- cd ~/builds/ss
+  # Init PHP
+  - phpenv rehash
+  - phpenv config-rm xdebug.ini
+  - echo 'memory_limit = 2048M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
 
 script:
 - vendor/bin/phpunit silverstripe-acecodeeditor/tests/
