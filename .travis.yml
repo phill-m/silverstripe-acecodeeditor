@@ -17,4 +17,4 @@ before_script:
 - cd ~/builds/ss
 
 script:
-- vendor/bin/phpunit <yourmodule>/tests/
+- vendor/bin/phpunit silverstripe-acecodeeditor/tests/
