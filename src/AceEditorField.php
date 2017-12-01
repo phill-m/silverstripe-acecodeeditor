@@ -266,4 +266,10 @@ class AceEditorField extends \SilverStripe\Forms\TextareaField
 		return $this;
 	}
 
+
+	public function getMode()
+	{
+		return $this->mode;
+	}
+
 }
