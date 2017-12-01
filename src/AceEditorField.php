@@ -223,8 +223,8 @@ class AceEditorField extends \SilverStripe\Forms\TextareaField
 
 	public function Field($properties = array())
 	{
-		SilverStripe\View\Requirements::javascript("silverstripe-ace-editor/javascript/AceEditorField.js");
-		SilverStripe\View\Requirements::javascript("silverstripe-ace-editor/thirdparty/ace/src-min-noconflict/ace.js");
+		SilverStripe\View\Requirements::javascript(basename(dirname(__DIR__)) . "/javascript/AceEditorField.js");
+		SilverStripe\View\Requirements::javascript(basename(dirname(__DIR__)) . "/thirdparty/ace/src-min-noconflict/ace.js");
 		return parent::Field($properties);
 	}
 
