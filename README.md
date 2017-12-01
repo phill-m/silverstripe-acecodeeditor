@@ -1,5 +1,7 @@
 # SilverStripe AceEditorField
 
+[![Build Status](https://travis-ci.org/phill-m/silverstripe-acecodeeditor.svg?branch=master)](https://travis-ci.org/phill-m/silverstripe-acecodeeditor)
+
 A SilverStripe 4 implementation of Ace Editor (https://ace.c9.io)
 
 
