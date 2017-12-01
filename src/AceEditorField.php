@@ -221,10 +221,18 @@ class AceEditorField extends \SilverStripe\Forms\TextareaField
 	private $mode = 'html';
 
 
+	/**
+	 * Visible number of text lines.
+	 *
+	 * @var int
+	 */
+	protected $rows = 20;
+
+
 	public function Field($properties = array())
 	{
-		SilverStripe\View\Requirements::javascript(basename(dirname(__DIR__)) . "/javascript/AceEditorField.js");
 		SilverStripe\View\Requirements::javascript(basename(dirname(__DIR__)) . "/thirdparty/ace/src-min-noconflict/ace.js");
+		SilverStripe\View\Requirements::javascript(basename(dirname(__DIR__)) . "/javascript/AceEditorField.js");
 		return parent::Field($properties);
 	}
 
